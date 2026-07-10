@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>INSPIRA | Vista sua Fé</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/4d89d5b0d4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <img src="img/logo.png" class="logo" alt="Logo INSPIRA">
+
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <img src="img/logo.png" class="hero-logo" alt="Logo INSPIRA">
+
+            <h1>Vista sua Fé.<br>Inspire sua Força.</h1>
+
+            <p>
+                Roupas que expressam propósito, elegância e identidade cristã.
+            </p>
+
+            <a href="#produtos" class="btn">Conheça a Coleção</a>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <h2>Sobre a Inspira</h2>
+
+        <p>
+            A INSPIRA nasceu com a missão de vestir pessoas que desejam demonstrar sua fé através do estilo.
+            Cada coleção é desenvolvida para unir conforto, qualidade e propósito.
+            Mais que roupas, entregamos uma mensagem de esperança e inspiração.
+        </p>
+    </section>
+
+    <section id="produtos">
+        <div class="section-header">
+            <h2>Nossos Produtos</h2>
+            <p class="section-subtitle">
+                Peças pensadas para unir fé, estilo e identidade.
+            </p>
+        </div>
+
+        <div class="cards" id="lista-produtos"></div>
+    </section>
+
+    <section class="vantagens">
+        <h2>Por que escolher a INSPIRA?</h2>
+
+        <div class="lista">
+            <div>✔ Qualidade Premium</div>
+            <div>✔ Estampas Exclusivas</div>
+            <div>✔ Pagamento Seguro</div>
+            <div>✔ Entrega para todo Brasil</div>
+            <div>✔ Atendimento Humanizado</div>
+            <div>✔ Moda Cristã Moderna</div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+
+        <form>
+            <input type="text" placeholder="Nome">
+            <input type="email" placeholder="E-mail">
+            <textarea placeholder="Mensagem"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div class="redes">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© <span id="ano-atual"></span> INSPIRA • Inspire sua Força. | criado por Felipe Rodrigues</p>
+    </footer>
+
+   
+
+    <!-- BOTÃO FLUTUANTE WHATSAPP -->
+    <a href="https://wa.me/5532999403830?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20os%20produtos%20da%20INSPIRA."
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="Falar no WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+    <!-- MODAL PRODUTO -->
+    <div class="modal" id="modal-produto">
+        <div class="modal-overlay" id="fechar-modal"></div>
+
+        <div class="modal-content">
+            <button class="modal-close" id="btn-fechar-modal" aria-label="Fechar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="modal-grid">
+                <div class="modal-image-box">
+                    <img id="modal-imagem" src="" alt="Produto" class="modal-img">
+                </div>
+
+                <div class="modal-info">
+                    <span class="modal-badge">INSPIRA</span>
+                    <h3 id="modal-nome">Produto</h3>
+                    <p id="modal-descricao">Descrição do produto</p>
+
+                    <div class="modal-preco" id="modal-preco">R$ 0,00</div>
+
+                    <div class="modal-actions">
+                        <a id="modal-whatsapp" href="#" target="_blank" class="btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Comprar no WhatsApp
+                        </a>
+
+                        <button class="btn-outline" id="btn-fechar-modal-2">
+                            Continuar vendo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

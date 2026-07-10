@@ -1,0 +1,663 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg: #000;
+    --bg-soft: #080808;
+    --card: #111;
+    --card-2: #161616;
+    --text: #fff;
+    --text-soft: #ddd;
+    --gold: #c8a15a;
+    --gold-dark: #a7813d;
+    --border: rgba(255, 255, 255, 0.08);
+    --shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+    --whatsapp: #25d366;
+    --whatsapp-dark: #1ebe5d;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 10%;
+    background: rgba(0, 0, 0, .88);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.logo {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 140px 20px 40px;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
+        radial-gradient(circle at top, rgba(200, 161, 90, 0.18), transparent 35%);
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero-logo {
+    width: 220px;
+    margin: 0 auto 30px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    font-family: Cinzel, serif;
+    line-height: 1.2;
+}
+
+.hero p {
+    margin: 30px auto;
+    max-width: 650px;
+    font-size: 18px;
+    color: var(--text-soft);
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background: var(--gold);
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 40px;
+    transition: .3s;
+    box-shadow: var(--shadow);
+}
+
+.btn:hover {
+    transform: scale(1.06);
+    background: #d8b26b;
+}
+
+section {
+    padding: 100px 10%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 18px;
+    font-family: Cinzel, serif;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-subtitle {
+    color: var(--text-soft);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#sobre p {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    line-height: 1.8;
+    color: var(--text-soft);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: linear-gradient(180deg, var(--card), var(--card-2));
+    border-radius: 22px;
+    overflow: hidden;
+    transition: .35s;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(200, 161, 90, 0.55);
+}
+
+.card-image {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    background: #0f0f0f;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.06);
+}
+
+.card-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: var(--gold);
+    color: #000;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 8px 12px;
+    border-radius: 30px;
+    letter-spacing: .5px;
+}
+
+.card-content {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--text-soft);
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.card-footer {
+    margin-top: auto;
+}
+
+.preco {
+    display: block;
+    color: var(--gold);
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.card-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-produto,
+.btn-detalhes {
+    flex: 1;
+    min-width: 140px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 40px;
+    padding: 14px 18px;
+    font-weight: 700;
+    transition: .3s;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.btn-produto {
+    background: var(--gold);
+    color: #000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-produto:hover {
+    transform: translateY(-2px);
+    background: #d8b26b;
+}
+
+.btn-detalhes {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(200, 161, 90, 0.5);
+}
+
+.btn-detalhes:hover {
+    background: rgba(200, 161, 90, 0.08);
+}
+
+.lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.lista div {
+    background: linear-gradient(180deg, #101010, #151515);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 700px;
+    margin: auto;
+}
+
+input,
+textarea {
+    padding: 18px;
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: white;
+    border-radius: 10px;
+    font-family: inherit;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: rgba(200, 161, 90, 0.45);
+}
+
+textarea {
+    height: 170px;
+    resize: none;
+}
+
+button[type="submit"] {
+    background: var(--gold);
+    padding: 18px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+button[type="submit"]:hover {
+    background: #d8b26b;
+}
+
+.redes {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.redes a {
+    font-size: 35px;
+    color: var(--gold);
+    transition: .3s;
+}
+
+.redes a:hover {
+    transform: translateY(-4px);
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    background: var(--bg-soft);
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* BOTÃO TOPO */
+.topo {
+    position: fixed;
+    right: 25px;
+    bottom: 100px;
+    background: var(--gold);
+    width: 58px;
+    height: 58px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #000;
+    font-size: 22px;
+    z-index: 999;
+    box-shadow: var(--shadow);
+    transition: .3s;
+}
+
+.topo:hover {
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* BOTÃO WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: var(--whatsapp);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 32px;
+    z-index: 1000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    transition: .3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08);
+    background: var(--whatsapp-dark);
+}
+
+/* MODAL */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal.ativo {
+    display: flex;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1100px;
+    background: #0d0d0d;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.modal-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+}
+
+.modal-image-box {
+    background: #050505;
+    min-height: 420px;
+}
+
+.modal-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-info {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-badge {
+    display: inline-block;
+    width: fit-content;
+    background: rgba(200, 161, 90, 0.14);
+    color: var(--gold);
+    border: 1px solid rgba(200, 161, 90, 0.28);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+.modal-info h3 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.modal-info p {
+    color: var(--text-soft);
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+
+.modal-preco {
+    color: var(--gold);
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.modal-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.btn-whatsapp,
+.btn-outline {
+    border: none;
+    border-radius: 40px;
+    padding: 15px 22px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .3s;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.btn-whatsapp {
+    background: var(--whatsapp);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-2px);
+    background: var(--whatsapp-dark);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 5;
+    transition: .3s;
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .modal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-image-box {
+        min-height: 320px;
+        max-height: 420px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 18px;
+        padding: 16px 20px;
+    }
+
+    nav ul {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding-top: 180px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 80px 20px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .card-image {
+        height: 260px;
+    }
+
+    .modal-info {
+        padding: 26px;
+    }
+
+    .modal-info h3 {
+        font-size: 28px;
+    }
+
+    .modal-preco {
+        font-size: 28px;
+    }
+
+    .topo {
+        right: 20px;
+        bottom: 95px;
+    }
+
+    .whatsapp-float {
+        right: 20px;
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        height: 60px;
+    }
+
+    .hero-logo {
+        width: 180px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .btn,
+    .btn-produto,
+    .btn-detalhes,
+    .btn-whatsapp,
+    .btn-outline {
+        width: 100%;
+    }
+
+    .card-buttons {
+        flex-direction: column;
+    }
+}
