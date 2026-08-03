@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título e descrição são reescritos dinamicamente pelo produto.js
+         a partir do produto encontrado (SEO por produto) -->
+    <title>Produto | INSPIRA</title>
+    <meta name="description" content="Conheça os detalhes deste produto INSPIRA: fotos, tecido, medidas e muito mais.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital@1&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html"><img src="img/logo.png" class="logo" alt="Logo INSPIRA"></a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html#inicio">Início</a></li>
+                <li><a href="index.html#colecoes">Coleções</a></li>
+                <li><a href="index.html#produtos">Produtos</a></li>
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="index.html#faq">Dúvidas</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <div class="container breadcrumb">
+        <a href="index.html">Início</a> /
+        <a href="index.html#produtos" id="breadcrumb-colecao">Coleções</a> /
+        <span id="breadcrumb-produto">Produto</span>
+    </div>
+
+    <div id="produto-container">
+        <section class="produto-detalhe">
+            <div class="container">
+                <div class="produto-grid">
+
+                    <!-- Galeria -->
+                    <div class="produto-galeria">
+                        <div class="produto-galeria-principal">
+                            <img id="produto-imagem-principal" src="" alt="">
+                        </div>
+                        <div class="produto-thumbs" id="produto-thumbs"></div>
+                    </div>
+
+                    <!-- Informações -->
+                    <div class="produto-info">
+                        <a href="index.html#produtos" class="colecao-tag-link" id="produto-colecao-link">Coleção</a>
+                        <h1 id="produto-nome">Nome do produto</h1>
+                        <div class="produto-preco" id="produto-preco">R$ 0,00</div>
+                        <p class="produto-descricao" id="produto-descricao">Descrição do produto.</p>
+
+                        <div class="produto-acoes">
+                            <a id="produto-btn-comprar" href="#" target="_blank" rel="noopener" class="btn btn-gold btn-block">
+                                <i class="fa-solid fa-cart-shopping"></i> Comprar no Mercado Livre
+                            </a>
+                            <a id="produto-btn-whatsapp" href="#" target="_blank" rel="noopener" class="btn btn-whatsapp btn-block">
+                                <i class="fa-brands fa-whatsapp"></i> Tirar dúvidas no WhatsApp
+                            </a>
+                        </div>
+
+                        <div class="produto-ficha">
+                            <h3>Ficha Técnica</h3>
+                            <ul class="ficha-lista" id="produto-ficha-lista"></ul>
+
+                            <h3>Tabela de Medidas (cm)</h3>
+                            <table class="tabela-medidas" id="produto-tabela-medidas"></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="produtos-relacionados" id="produtos-relacionados">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">Você também pode gostar</span>
+                    <h2>Mais desta coleção</h2>
+                </div>
+                <div class="cards" id="produtos-relacionados-lista"></div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ============================================================
+         RODAPÉ (idêntico ao da home, para manter consistência)
+         ============================================================ -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>INSPIRA</h4>
+                    <p style="color:var(--text-soft); font-size:14px; line-height:1.7;">
+                        Vista sua fé. Inspire sua força.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html#colecoes">Coleções</a></li>
+                        <li><a href="index.html#produtos">Produtos</a></li>
+                        <li><a href="index.html#sobre">Sobre</a></li>
+                        <li><a href="index.html#faq">Dúvidas</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li><a href="politica-de-troca.html">Política de Troca</a></li>
+                        <li><a href="politica-de-privacidade.html">Política de Privacidade</a></li>
+                        <li><a href="termos-de-uso.html">Termos de Uso</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Redes Sociais</h4>
+                    <div class="footer-redes">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>INSPIRA — CNPJ/MEI: 00.000.000/0001-00</p>
+                <p>© <span id="ano-atual"></span> INSPIRA • Inspire sua Força. | criado por Felipe Rodrigues</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de zoom das fotos -->
+    <div class="modal" id="modal-zoom">
+        <div class="modal-overlay" id="modal-zoom-overlay"></div>
+        <div class="modal-content-img">
+            <button class="modal-close" id="fechar-modal-zoom" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button>
+            <img id="modal-zoom-imagem" src="" alt="Foto ampliada do produto">
+        </div>
+    </div>
+
+    <button class="topo" id="btn-topo" aria-label="Voltar ao topo">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <a href="https://wa.me/5532999403830?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20este%20produto%20da%20INSPIRA."
+       class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/data.js"></script>
+    <script src="js/ui.js" defer></script>
+    <script src="js/produto.js" defer></script>
+</body>
+
+</html>
